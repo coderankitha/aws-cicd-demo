@@ -1,4 +1,9 @@
 #!/bin/bash
+
 cd /home/ubuntu/app
+
 npm install
-node app.js &
+
+pkill node || true
+
+nohup node app.js > app.log 2>&1 &
